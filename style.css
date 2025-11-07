@@ -1,0 +1,151 @@
+/* ===== Reset e base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #000000, #111827, #1e293b);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ===== Container ===== */
+#container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 25px;
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* ===== Perfil ===== */
+#profile img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid #00ffcc;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+#profile img:hover {
+  transform: scale(1.05);
+}
+
+#profile h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #00ffcc, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#profile p {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+}
+
+/* ===== Menu ===== */
+.menu {
+  list-style: none;
+  margin-top: 25px;
+}
+
+.menu li {
+  margin: 12px 0;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #00ffcc, #60a5fa);
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 255, 204, 0.3);
+  transition: all 0.3s ease;
+}
+
+.menu a i {
+  font-size: 1.1rem;
+}
+
+.menu a:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(90deg, #60a5fa, #00ffcc);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+/* ===== Botão em Destaque (eBook) ===== */
+.highlight-btn {
+  background: linear-gradient(90deg, #ff007f, #ffb347);
+  color: #fff !important;
+  font-weight: 700;
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+  animation: pulse 1.8s infinite;
+  border: none;
+}
+
+.highlight-btn i {
+  color: #fff;
+}
+
+.highlight-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #ffb347, #ff007f);
+  box-shadow: 0 0 30px rgba(255, 179, 71, 0.8);
+}
+
+/* Animação pulsante */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 0, 128, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 179, 71, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 0, 128, 0.4);
+  }
+}
+
+/* ===== Redes Sociais ===== */
+#social-links {
+  margin-top: 25px;
+}
+
+#social-links a {
+  color: #00ffcc;
+  margin: 0 10px;
+  font-size: 1.4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#social-links a:hover {
+  color: #fff;
+  transform: scale(1.15);
+}
+
+/* ===== Rodapé ===== */
+footer {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  color: #fff;
+}
