@@ -1,0 +1,520 @@
+/* ======= BASE ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* ======= NAVBAR ======= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: rgba(13, 17, 23, 0.95);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.logo span {
+  color: #007bff;
+}
+
+/* ======= MENU LATERAL ======= */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+  color: #007bff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.overlay {
+  display: none;
+}
+
+/* ======== MENU MOBILE ======== */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #161b22;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 70%;
+    padding: 1.5rem;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+    border-left: 2px solid #007bff;
+    z-index: 1000;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li a {
+    color: #58a6ff;
+    font-weight: 600;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .menu li a:hover {
+    color: #000;
+    transform: translateX(5px);
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    color: #58a6ff;
+  }
+
+  .overlay {
+    display: none;
+  }
+}
+
+/* ======= HERO ======= */
+.hero {
+  background: url('assets/Felipe-Santana-fundo.jpeg') 
+              no-repeat center calc(50% + -200px) / cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  z-index: 1;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056d2;
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+}
+
+/* ======= SEÇÕES ======= */
+section {
+  padding: 5rem 2rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ======= SOBRE ======= */
+.sobre {
+  padding: 4rem 2rem;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.sobre h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.sobre p {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.7;
+  color: #000;
+}
+
+.sobre .info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.sobre .info div {
+  background: rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.sobre .info div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.25);
+}
+
+.sobre .info h3 {
+  color: #007bff;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.sobre .info p {
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ======= MÉTRICAS ======= */
+.metricas {
+  background: rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.metricas h2 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.metricas .descricao {
+  color: #000;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.cards-metricas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card-metrica {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 260px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card-metrica:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.25);
+}
+
+.card-metrica i {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 0.6rem;
+}
+
+.card-metrica h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.card-metrica .numero {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.card-metrica span {
+  display: block;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.crescimento {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.crescimento.positivo {
+  color: #036103;
+}
+
+.crescimento i {
+  margin-right: 4px;
+}
+
+/* ======= PLATAFORMAS ======= */
+.plataformas {
+  background: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.plataformas h2 {
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  margin-top: 40px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  padding: 2.2rem 2rem;
+  width: 280px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at top left, rgba(0, 123, 255, 0.15), transparent 70%);
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.25);
+}
+
+.card i {
+  font-size: 2.8rem;
+  color: #007bff;
+  margin-bottom: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover i {
+  color: #0056b3;
+  transform: scale(1.1);
+}
+
+.card h3 {
+  color: #000;
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.card p {
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* ======= TABELA ======= */
+.publicidade {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.publicidade h2 {
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.publicidade table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.publicidade th,
+.publicidade td {
+  border: 1px solid #e0e7ff;
+  padding: 14px 12px;
+  text-align: center;
+  color: #000000;
+  font-size: 1rem;
+}
+
+.publicidade th {
+  background: #007bff;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.publicidade tr:nth-child(even) {
+  background: #eef4ff;
+}
+
+.publicidade tr:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+/* ======= CONTATO ======= */
+.contato {
+  background: rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.social i {
+  font-size: 1.8rem;
+  color: #007bff;
+  transition: 0.3s;
+}
+
+.social i:hover {
+  color: #000000;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  background: rgba(13, 17, 23, 0.95);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ======= RESPONSIVO ======= */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    padding: 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .hero {
+    background: url('assets/Felipe-Santana-fundo.jpeg')
+                no-repeat center center / cover;
+    height: 100vh;
+  }
+
+  .card-metrica {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    background-position: center top;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
